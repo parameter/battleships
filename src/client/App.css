@@ -1,0 +1,244 @@
+
+body {
+  font-size: 22px
+}
+p {
+  float: left;
+  width: 100%;
+}
+
+button {
+  border:none;
+  background-color: #222222;
+  color: #ffffff;
+  padding: 1em;
+  cursor:pointer;
+}
+
+.scene {
+  position:absolute;
+  width: 70%;
+  height:100%;
+  left: 0;
+  top:0;
+  padding-top: 100px;
+  background: linear-gradient(-42deg, rgba(0,0,0,0.3), rgba(0, 40, 105, 0.8));
+  background-attachment: fixed;
+  background-size: 100% auto; 
+  background-position: center center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.usernameholder {
+  position:absolute;
+  width: 100%;
+  height:100%;
+  background: #ede447; /* Old browsers */
+  background: -moz-linear-gradient(left, #ede447 0%, #d6c215 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ede447 0%,#d6c215 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ede447 0%,#d6c215 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ede447', endColorstr='#d6c215',GradientType=1 ); /* IE6-9 */
+}
+
+.grid {
+  float:left;
+  margin: 1em 0 0 1em;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+}
+.grid td {
+  border-width: 1px 0 0  1px;
+  border-style: solid;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8vwkAArYBs3xK2c8AAAAASUVORK5CYII=);
+}
+.grid td.ship {
+  border-width: 1px 0 0  1px;
+  border-style: solid;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  background-image: none;
+}
+.grid .enemy.my_turn td:hover {
+  background-color: #ffb3b3;
+}
+
+.statusbar {
+  position: absolute;
+  top:0;
+  width: 100%;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII=);
+}
+.statusbar .inner {
+  float: left;
+  width: 100%;
+  margin:20vh 0 0 3vw;
+}
+
+.statusbar label {
+  font-size: 2.5vw;
+  line-height: 5.9vw;
+}
+
+.statusbar div {
+  float:left;
+  padding: 10px 15px;
+  margin: 0;
+}
+
+.statusbar div.status {
+  background-color: #ffffff;
+}
+
+.statusbar .right {
+  float:right;
+}
+
+.statusbar input.userName {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 6px #333333;
+  border:none;
+  color: #333333;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+  font-size: 2vw;
+  padding: 1em;
+}
+
+.statusbar button {
+  background-color: #F3CD0B;
+  border:none;
+  color: #333333;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.2vw;
+  padding: 5px 14px;
+}
+
+.playBackground {
+  position: absolute;
+  bottom:30px;
+  right: 30px;
+  cursor:pointer;
+}
+
+.gameoutcome {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:none;
+}
+.gameoutcome h3 {
+  font-size: 9vw;
+  text-align: center;
+  padding: 0;
+  margin: 25vh 0 0 0;
+  color: #ffffff;
+  text-shadow: 0px 0px 6px #333333;
+}
+.gameoutcome.won {
+  display:block;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z5CwCQAFeAITQ/0sNgAAAABJRU5ErkJggg==);
+}
+.gameoutcome.lost {
+  display:block;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM02wQAASQA6vHg5QQAAAAASUVORK5CYII=);
+}
+
+button.new_game {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 6px #333333;
+  border:none;
+  color: #333333;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+  font-size: 2vw;
+  padding: 1em;
+}
+
+div.chat {
+  position:absolute;
+  width:30%;
+  height:100vh;
+  right: 0;
+  bottom: 0;
+  background: #333;
+}
+
+div.chat form {
+  position:absolute;
+  width:100%;
+  bottom: 0;
+}
+
+ul.chat {
+  position:absolute;
+  width:100%;
+  left: 0;
+  bottom: 100px;
+  padding:0;
+  margin:0 0 15px 0;
+  list-style: none;
+  background: #333;
+}
+
+ul.chat li {
+  margin: 0 0 11px 0;
+}
+
+ul.chat li.me div {
+   text-align: left;
+   color:#ffffff;
+}
+
+ul.chat li.you div {
+   text-align: right;
+   color:#ffffff;
+}
+
+ul.chat li div.username {
+  font-size: 0.6em;
+  padding: 0 15px 3px 15px;
+}
+
+ul.chat li div.message {
+  font-size: 0.8em;
+  padding: 0 15px 3px 15px;
+}
+
+div.chat input[name=message] {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 6px #333333;
+  border:none;
+  color: #333333;
+  margin: 0 auto;
+  display: block;
+  font-size: 2vw;
+  width: calc(100% - 2em);
+  padding: 0.5em 1em;
+}
+
+div.chat button {
+  background-color: #68DD17;
+  box-shadow: 0px 0px 6px #333333;
+  border:none;
+  color: #333333;
+  margin: 0;
+  display: block;
+  font-size: 1em;
+  width: 100%;
+  padding: 0.3em 1em;
+}
+
+
